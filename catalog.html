@@ -119,49 +119,49 @@
       <li class="cards__item">
         <img src="img/catalog-img-1.png" class="cards_img" width="220" height="165" alt="Изображение товара">
         <p class="cards__text">Набор для путешествий «Baxter of California»</p>
-        <div class="cards__price-wrapper">
-          <p class="cards__price">2 900</p>
-          <a href="" class="cards__button button">Купить</a>
+        <div class="buy">
+          <p class="buy__price">2 900</p>
+          <a href="" class="buy__button button">Купить</a>
         </div>
       </li>
       <li class="cards__item">
         <img src="img/catalog-img-2.png" class="cards_img" width="220" height="165" alt="Изображение товара">
         <p class="cards__text">Увлажняющий кондиционер «Baxter of California»</p>
-        <div class="cards__price-wrapper">
-          <p class="cards__price">750</p>
-          <a href="" class="cards__button button">Купить</a>
+        <div class="buy">
+          <p class="buy__price">750</p>
+          <a href="" class="buy__button button">Купить</a>
         </div>
       </li>
       <li class="cards__item">
         <img src="img/catalog-img-3.png" class="cards_img" width="220" height="165" alt="Изображение товара">
         <p class="cards__text">Гель для волос «SUAVECITO»</p>
-        <div class="cards__price-wrapper">
-          <p class="cards__price">290</p>
-          <a href="" class="cards__button button">Купить</a>
+        <div class="buy">
+          <p class="buy__price">290</p>
+          <a href="" class="buy__button button">Купить</a>
         </div>
       </li>
       <li class="cards__item">
         <img src="img/catalog-img-4.png" class="cards_img" width="220" height="165" alt="Изображение товара">
         <p class="cards__text">Глина для укладки волос «American crew»</p>
-        <div class="cards__price-wrapper">
-          <p class="cards__price">500</p>
-          <a href="" class="cards__button button">Купить</a>
+        <div class="buy">
+          <p class="buy__price">500</p>
+          <a href="" class="buy__button button">Купить</a>
         </div>
       </li>
       <li class="cards__item">
         <img src="img/catalog-img-5.png" class="cards_img" width="220" height="165" alt="Изображение товара">
         <p class="cards__text">Гель для волос «AMERICAN CREW»</p>
-        <div class="cards__price-wrapper">
-          <p class="cards__price">300</p>
-          <a href="" class="cards__button button">Купить</a>
+        <div class="buy">
+          <p class="buy__price">300</p>
+          <a href="" class="buy__button button">Купить</a>
         </div>
       </li>
       <li class="cards__item">
         <img src="img/catalog-img-6.png" class="cards_img" width="220" height="165" alt="Изображение товара">
         <p class="cards__text">Набор для бритья «Baxter of California»</p>
-        <div class="cards__price-wrapper">
-          <p class="cards__price">3 900</p>
-          <a href="" class="cards__button button">Купить</a>
+        <div class="buy">
+          <p class="buy__price">3 900</p>
+          <a href="" class="buy__button button">Купить</a>
         </div>
       </li>
     </ul>
@@ -193,6 +193,24 @@
       <a href="" class="developer__button button">Html Academy</a>
     </div>
   </footer>
+
+  <div class="popup">
+    <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
+      <fieldset class="popup__fieldset">
+        <h3 class="popup__title">Личный кабинет</h2>
+        <legend class="popup__legend">Ведите пожалуйста свой логин и пароль</legend>
+        <input type="text" name="login" placeholder="Логин">
+        <input type="password" name="password" placeholder="Пароль">
+      </fieldset>
+      <label class="popup__checkbox-label">
+        <input type="checkbox" name="remember" checked>
+        <span class="popup__checkbox-icon"></span>
+        Запомните меня
+      </label>
+      <a href="" class="popup__recover">Я забыл пароль!</a>
+      <button type="submit" class="popup__button">Войти</button>
+    </form>
+  </div>
 
 </body>
 </html>
