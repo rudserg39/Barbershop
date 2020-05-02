@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbershop "Borodinski"</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
 </head>
 <body>
 
@@ -17,8 +20,8 @@
       <ul class="nav__list">
         <li class="nav__item"><a href="" class="nav__link">Информация</a></li>
         <li class="nav__item"><a href="" class="nav__link">Новости</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Прайс-лист</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Магазин</a></li>
+        <li class="nav__item"><a href="pricelist.html" class="nav__link">Прайс-лист</a></li>
+        <li class="nav__item"><a href="catalog.html" class="nav__link">Магазин</a></li>
         <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
       </ul>
     </nav>
@@ -47,12 +50,12 @@
       <article class="news__item">
         <h3 class="visually-hidden">Новость</h3>
         <p class="news__text">Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
-        <time datetime="">11 января</time>
+        <time class="news__date" datetime="">11 января</time>
       </article>
       <article class="news__item">
         <h3 class="visually-hidden">Новость</h3>
         <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
-        <time datetime="">18 января</time>
+        <time class="news__date" datetime="">18 января</time>
       </article>
       <a href="" class="news__button button">Все новости</a>
     </div>
@@ -62,8 +65,8 @@
           <img src="img/slider-img-1.jpg" width="286" height="164" alt="Изображение интерьера">
         </div>
         <div class="slider__buttons">
-          <a href="" class="slider__button">Назад</a>
-          <a href="" class="slider__button">Вперед</a>
+          <a href="" class="slider__button button">Назад</a>
+          <a href="" class="slider__button button">Вперед</a>
         </div>
       </div>
     </div>
@@ -151,6 +154,7 @@
       <a href="" class="popup__recover">Я забыл пароль!</a>
       <button type="submit" class="popup__button">Войти</button>
     </form>
+    <span class="popup___close"></span>
   </div>
 
   <div class="map">
