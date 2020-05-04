@@ -11,213 +11,226 @@
 <body>
 
   <header class="header">
-    <div class="catalog-logo">
-      <a href="index.html" class="catalog-logo__link">
-        <img src="img/catalog-logo.png" class="catalog-logo__img" width="111" height="24" alt="Логотип">
-      </a>
+    <div class="container">
+      <div class="nav__wrapper">
+        <div class="catalog-nav__wrapper">
+          <a href="index.html" class="catalog-logo__link">
+            <img src="img/catalog-logo.png" class="catalog-logo__img" width="111" height="24" alt="Логотип">
+          </a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="" class="nav__link">Информация</a></li>
+              <li class="nav__item"><a href="" class="nav__link">Новости</a></li>
+              <li class="nav__item"><a href="pricelist.html" class="nav__link">Прайс-лист</a></li>
+              <li class="nav__item"><a href="catalog.html" class="nav__link">Магазин</a></li>
+              <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="" class="login">Вход</a>
+      </div>
     </div>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="" class="nav__link">Информация</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Новости</a></li>
-        <li class="nav__item"><a href="pricelist.html" class="nav__link">Прайс-лист</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Магазин</a></li>
-        <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-      </ul>
-    </nav>
-    <a href="" class="login">Вход</a>
   </header>
 
-  <div class="breadcrumbs">
-    <h2 class="breadcrumbs__title">Средства для ухода</h2>
-    <ul class="breadcrumbs__list">
-      <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
-      <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Магазин</a></li>
-      <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Средства для ухода</a></li>
-    </ul>
-  </div>
-
-  <section class="filter">
-    <h2 class="visually-hidden">Фильтр каталога</h2>
-    <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
-      <fieldset class="filter__fieldset">
-        <legend class="filter__legend">Производители:</legend>
-        <ul class="filter__list">
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="checkbox" class="filter__input" name="Baxter of California" checked>
-              <span class="filter__checkbox-icon"></span>
-              Baxter of California
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="checkbox" class="filter__input" name="Mr Natty">
-              <span class="filter__checkbox-icon"></span>
-              Mr Natty
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="checkbox" class="filter__input" name="Suavetito" checked>
-              <span class="filter__checkbox-icon"></span>
-              Suavetito
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="checkbox" class="filter__input" name="Malin+Goetz">
-              <span class="filter__checkbox-icon"></span>
-              Malin+Goetz
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="checkbox" class="filter__input" name="Murrays">
-              <span class="filter__checkbox-icon"></span>
-              Murray's
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="checkbox" class="filter__input" name="American Crew" checked>
-              <span class="filter__checkbox-icon"></span>
-              American Crew
-            </label>
-          </li>
+  <main class="catalog-main">
+    <div class="container">
+      <div class="breadcrumbs">
+        <h2 class="breadcrumbs__title">Средства для ухода</h2>
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Магазин</a></li>
+          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Средства для ухода</a></li>
         </ul>
-      </fieldset>
-      <fieldset class="filter__fieldset">
-        <legend class="filter__legend">Группы товаров:</legend>
-        <ul class="filter__list">
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="radio" class="filter__input" name="goods" value="shave">
-              <span class="filter__radio-icon"></span>
-              Бритвенные принадлежности
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="radio" class="filter__input" name="goods" value="care">
-              <span class="filter__radio-icon"></span>
-              Средства для ухода
-            </label>
-          </li>
-          <li class="filter__item">
-            <label class="filter__label">
-              <input type="radio" class="filter__input" name="goods" value="accessories">
-              <span class="filter__radio-icon"></span>
-              Аксессуары
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="filter__submit-button" type="submit">Показать</button>
-    </form>
-  </section>
-
-  <section class="cards">
-    <ul class="cards__list">
-      <li class="cards__item">
-        <a href="product.html" class="card__link">
-          <img src="img/catalog-img-1.png" class="cards_img" width="220" height="165" alt="Изображение товара">
-        </a>
-        <a href="product.html" class="card__link">
-          <p class="cards__text">Набор для путешествий «Baxter of California»</p>
-        </a>
-        <div class="buy">
-          <p class="buy__price">2 900</p>
-          <a href="" class="buy__button button">Купить</a>
-        </div>
-      </li>
-      <li class="cards__item">
-        <a href="" class="card__link">
-          <img src="img/catalog-img-2.png" class="cards_img" width="220" height="165" alt="Изображение товара">
-        </a>
-        <a href="" class="card__link">
-          <p class="cards__text">Увлажняющий кондиционер «Baxter of California»</p>
-        </a>
-        <div class="buy">
-          <p class="buy__price">750</p>
-          <a href="" class="buy__button button">Купить</a>
-        </div>
-      </li>
-      <li class="cards__item">
-        <a href="" class="card__link">
-          <img src="img/catalog-img-3.png" class="cards_img" width="220" height="165" alt="Изображение товара">
-        </a>
-        <a href="" class="card__link">
-          <p class="cards__text">Гель для волос «SUAVECITO»</p>
-        </a>
-        <div class="buy">
-          <p class="buy__price">290</p>
-          <a href="" class="buy__button button">Купить</a>
-        </div>
-      </li>
-      <li class="cards__item">
-        <a href="" class="card__link">
-          <img src="img/catalog-img-4.png" class="cards_img" width="220" height="165" alt="Изображение товара">
-        </a>
-        <a href="" class="card__link">
-          <p class="cards__text">Глина для укладки волос «American crew»</p>
-        </a>
-        <div class="buy">
-          <p class="buy__price">500</p>
-          <a href="" class="buy__button button">Купить</a>
-        </div>
-      </li>
-      <li class="cards__item">
-        <a href="" class="card__link">
-          <img src="img/catalog-img-5.png" class="cards_img" width="220" height="165" alt="Изображение товара">
-        </a>
-        <a href="" class="card__link">
-          <p class="cards__text">Гель для волос «AMERICAN CREW»</p>
-        </a>
-        <div class="buy">
-          <p class="buy__price">300</p>
-          <a href="" class="buy__button button">Купить</a>
-        </div>
-      </li>
-      <li class="cards__item">
-        <a href="" class="card__link">
-          <img src="img/catalog-img-6.png" class="cards_img" width="220" height="165" alt="Изображение товара">
-        </a>
-        <a href="" class="card__link">
-          <p class="cards__text">Набор для бритья «Baxter of California»</p>
-        </a>
-        <div class="buy">
-          <p class="buy__price">3 900</p>
-          <a href="" class="buy__button button">Купить</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="cards__pages-list">
-      <li class="cards__pages-item"><a href="" class="cards__pages-link">1</a></li>
-      <li class="cards__pages-item"><a href="" class="cards__pages-link cards__pages-link--active">2</a></li>
-      <li class="cards__pages-item"><a href="" class="cards__pages-link">3</a></li>
-      <li class="cards__pages-item"><a href="" class="cards__pages-link">4</a></li>
-    </ul>
-  </section>
+      </div>
+      <div class="catalog__wrapper">
+        <section class="filter">
+          <h2 class="visually-hidden">Фильтр каталога</h2>
+          <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Производители:</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="checkbox" class="filter__input" name="Baxter of California" checked>
+                    <span class="filter__checkbox-icon"></span>
+                    Baxter of California
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="checkbox" class="filter__input" name="Mr Natty">
+                    <span class="filter__checkbox-icon"></span>
+                    Mr Natty
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="checkbox" class="filter__input" name="Suavecito" checked>
+                    <span class="filter__checkbox-icon"></span>
+                    Suavecito
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="checkbox" class="filter__input" name="Malin+Goetz">
+                    <span class="filter__checkbox-icon"></span>
+                    Malin+Goetz
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="checkbox" class="filter__input" name="Murrays">
+                    <span class="filter__checkbox-icon"></span>
+                    Murray's
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="checkbox" class="filter__input" name="American Crew" checked>
+                    <span class="filter__checkbox-icon"></span>
+                    American Crew
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Группы товаров:</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="radio" class="filter__input" name="goods" value="shave">
+                    <span class="filter__radio-icon"></span>
+                    Бритвенные принадлежности
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="radio" class="filter__input" name="goods" value="care">
+                    <span class="filter__radio-icon"></span>
+                    Средства для ухода
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="filter__label">
+                    <input type="radio" class="filter__input" name="goods" value="accessories">
+                    <span class="filter__radio-icon"></span>
+                    Аксессуары
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filter__submit-button button" type="submit">Показать</button>
+          </form>
+        </section>
+      
+        <section class="cards">
+          <ul class="cards__list">
+            <li class="cards__item">
+              <a href="product.html" class="card__link">
+                <img src="img/catalog-img-1.png" class="cards_img" width="220" height="165" alt="Изображение товара">
+              </a>
+              <a href="product.html" class="card__product-link">
+                <span class="cards__product-type">Набор для путешествий</span>
+                <span class="cards__product-brand">«Baxter of California»</span>
+              </a>
+              <div class="buy">
+                <p class="buy__price">2 900 ₽</p><a href="" class="buy__button button">Купить</a>
+              </div>
+            </li>
+            <li class="cards__item">
+              <a href="" class="card__link">
+                <img src="img/catalog-img-2.png" class="cards_img" width="220" height="165" alt="Изображение товара">
+              </a>
+              <a href="" class="card__product-link">
+                <span class="cards__product-type">Увлажняющий кондиционер</span>
+                <span class="cards__product-brand">«Baxter of California»</span>
+              </a>
+              <div class="buy">
+                <p class="buy__price">750 ₽</p><a href="" class="buy__button button">Купить</a>
+              </div>
+            </li>
+            <li class="cards__item">
+              <a href="" class="card__link">
+                <img src="img/catalog-img-3.png" class="cards_img" width="220" height="165" alt="Изображение товара">
+              </a>
+              <a href="" class="card__product-link">
+                <span class="cards__product-type">Гель для волос</span>
+                <span class="cards__product-brand">Suavecito</span>
+              </a>
+              <div class="buy">
+                <p class="buy__price">290 ₽</p><a href="" class="buy__button button">Купить</a>
+              </div>
+            </li>
+            <li class="cards__item">
+              <a href="" class="card__link">
+                <img src="img/catalog-img-4.png" class="cards_img" width="220" height="165" alt="Изображение товара">
+              </a>
+              <a href="" class="card__product-link">
+                <span class="cards__product-type">Глина для укладки волос</span>
+                <span class="cards__product-brand">«American crew»</span>
+              </a>
+              <div class="buy">
+                <p class="buy__price">500 ₽</p><a href="" class="buy__button button">Купить</a>
+              </div>
+            </li>
+            <li class="cards__item">
+              <a href="" class="card__link">
+                <img src="img/catalog-img-5.png" class="cards_img" width="220" height="165" alt="Изображение товара">
+              </a>
+              <a href="" class="card__product-link">
+                <span class="cards__product-type">Гель для волос</span>
+                <span class="cards__product-brand">«American crew»</span>
+              </a>
+              <div class="buy">
+                <p class="buy__price">300 ₽</p><a href="" class="buy__button button">Купить</a>
+              </div>
+            </li>
+            <li class="cards__item">
+              <a href="" class="card__link">
+                <img src="img/catalog-img-6.png" class="cards_img" width="220" height="165" alt="Изображение товара">
+              </a>
+              <a href="" class="card__product-link">
+                <span class="cards__product-type">Набор для бритья</span>
+                <span class="cards__product-brand">«Baxter of California»</span>
+              </a>
+              <div class="buy">
+                <p class="buy__price">3 900 ₽</p><a href="" class="buy__button button">Купить</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="cards__pages-list">
+            <li class="cards__pages-item"><a href="" class="cards__pages-link">1</a></li>
+            <li class="cards__pages-item"><a href="" class="cards__pages-link cards__pages-link--active">2</a></li>
+            <li class="cards__pages-item"><a href="" class="cards__pages-link">3</a></li>
+            <li class="cards__pages-item"><a href="" class="cards__pages-link">4</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
 
   <footer class="footer">
-    <div class="address">
-      <h3 class="address__org-name">Барбершоп «Бородинский»</h3>
-      <address class="address__text">Адрес: г. Сантк-Петербург, Б. Конюшенная, д. 19/8</address>
-      <a href="" class="address__popup-button">Как нас найти?</a>
-      <a href="tel:+74951234567" class="address__tel">+7 (495) 123-45-67</a>
-    </div>
-    <div class="social">
-      <p class="social__title">Давайте дружить!</p>
-      <ul class="social__list">
-        <li class="social__item"><a href="" class="social__link social__link--vk">Вконтакте</a></li>
-        <li class="social__item"><a href="" class="social__link social__link--facebook">Фейсбук</a></li>
-        <li class="social__item"><a href="" class="social__link social__linl--instagram">Инстаграм</a></li>
-      </ul>
-    </div>
-    <div class="developer">
-      <p class="developer__text">Разработано:</p>
-      <a href="" class="developer__button button">Html Academy</a>
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="address address--white">
+          <h3 class="address__org-name">Барбершоп «Бородинский»</h3>
+          <address class="address__text">Адрес: г. Сантк-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a href="" class="address__popup-button">Как нас найти?</a>
+          <a href="tel:+74951234567" class="address__tel address__tel--white">Телефон: +7 (495) 123-45-67</a>
+        </div>
+        <div class="social">
+          <p class="social__title">Давайте дружить!</p>
+          <ul class="social__list">
+            <li class="social__item"><a href="" class="social__link social__link--vk">Вконтакте</a></li>
+            <li class="social__item"><a href="" class="social__link social__link--facebook">Фейсбук</a></li>
+            <li class="social__item"><a href="" class="social__link social__link--instagram">Инстаграм</a></li>
+          </ul>
+        </div>
+        <div class="developer">
+          <p class="developer__text">Разработано:</p>
+          <a href="" class="developer__button button">Html Academy</a>
+        </div>
+      </div>
     </div>
   </footer>
 
