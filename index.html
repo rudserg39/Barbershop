@@ -12,14 +12,14 @@
 
   <header class="header">
     <div class="container">
-      <div class="nav__wrapper">
+      <div class="header__wrapper">
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="" class="nav__link">Информация</a></li>
-            <li class="nav__item"><a href="#news" class="nav__link">Новости</a></li>
-            <li class="nav__item"><a href="pricelist.html" class="nav__link">Прайс-лист</a></li>
-            <li class="nav__item"><a href="catalog.html" class="nav__link">Магазин</a></li>
-            <li class="nav__item"><a href="#contact-info" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="" class="nav__link"><span class="nav__text">Информация</span></a></li>
+            <li class="nav__item"><a href="#news" class="nav__link"><span class="nav__text">Новости</span></a></li>
+            <li class="nav__item"><a href="pricelist.html" class="nav__link"><span class="nav__text">Прайс-лист</span></a></li>
+            <li class="nav__item"><a href="catalog.html" class="nav__link"><span class="nav__text">Магазин</span></a></li>
+            <li class="nav__item"><a href="#contact-info" class="nav__link"><span class="nav__text">Контакты</span></a></li>
           </ul>
         </nav>
         <a href="" class="login">Вход</a>
@@ -113,19 +113,19 @@
               <form class="appointment__form" action="https://echo.htmlacademy.ru" method="POST">
                 <div class="appointment__item">
                   <label for="appointment__date" class="appointment__label">Дата</label>
-                  <input id="appointment__date" class="appointment__input" type="text" name="date" placeholder="08.10.2017">
+                  <input id="appointment__date" class="appointment__input" type="text" name="date" placeholder="08.10.2017" autocomplete="off">
                 </div>
                 <div class="appointment__item">
                   <label for="appointment__time" class="appointment__label">Время</label>
-                  <input id="appointment__time" class="appointment__input" type="text" name="time" placeholder="10:00">
+                  <input id="appointment__time" class="appointment__input" type="text" name="time" placeholder="10:00" autocomplete="off">
                 </div>
                 <div class="appointment__item">
                   <label for="appointment__name" class="appointment__label">Ваше имя</label>
-                  <input id="appointment__name" class="appointment__input" type="text" name="name" placeholder="Борода">
+                  <input id="appointment__name" class="appointment__input" type="text" name="name" placeholder="Борода" autocomplete="off">
                 </div>
                 <div class="appointment__item">
                   <label for="appointment__tel" class="appointment__label">Телефон</label>
-                  <input id="appointment__tel" class="appointment__input" type="text" name="tel" placeholder="+7 123 456-78-90">
+                  <input id="appointment__tel" class="appointment__input" type="text" name="tel" placeholder="+7 123 456-78-90" autocomplete="off">
                 </div>
                 <button type="submit" class="appointment__button button">Отправить</button>
               </form>
@@ -166,14 +166,14 @@
       <h3 class="popup__title">Личный кабинет</h2>
       <fieldset class="popup__fieldset">
         <legend class="popup__legend">Введите пожалуйста свой логин и пароль</legend>
-        <input class="popup__input" type="text" name="login" placeholder="Логин">
-        <input class="popup__input" type="password" name="password" placeholder="Пароль">
+        <input class="popup__input" type="text" name="login" placeholder="Логин" autocomplete="off">
+        <input class="popup__input" type="password" name="password" placeholder="Пароль" autocomplete="off">
       </fieldset>
       <div class="popup__checkbox-wrapper">
         <label class="popup__checkbox-label">
           <input class="popup__checkbox" type="checkbox" name="remember" checked>
           <span class="popup__checkbox-icon"></span>
-          Запомните меня
+          <span class="popup__checkbox-text">Запомните меня</span>
         </label>
         <a href="" class="popup__recover">Я забыл пароль!</a>
       </div>
@@ -186,6 +186,8 @@
     <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A03317eadd40910a57c5e16d52806d1cc9de05c8c6fee49d63d4053e37a1b4622&amp;source=constructor" width="766" height="560" frameborder="0"></iframe>
     <span class="map__close"></span>
   </div>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>

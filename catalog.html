@@ -12,18 +12,18 @@
 
   <header class="header">
     <div class="container">
-      <div class="nav__wrapper">
-        <div class="catalog-nav__wrapper">
-          <a href="index.html" class="catalog-logo__link">
-            <img src="img/catalog-logo.png" class="catalog-logo__img" width="111" height="24" alt="Логотип">
+      <div class="header__wrapper">
+        <div class="nav__wrapper">
+          <a href="index.html" class="logo__link">
+            <img src="img/logo.png" class="logo__img" width="111" height="24" alt="Логотип">
           </a>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="" class="nav__link">Информация</a></li>
-              <li class="nav__item"><a href="" class="nav__link">Новости</a></li>
-              <li class="nav__item"><a href="pricelist.html" class="nav__link">Прайс-лист</a></li>
-              <li class="nav__item"><a href="catalog.html" class="nav__link">Магазин</a></li>
-              <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+              <li class="nav__item"><a href="" class="nav__link"><span class="nav__text">Информация</span></a></li>
+              <li class="nav__item"><a href="" class="nav__link"><span class="nav__text">Новости</span></a></li>
+              <li class="nav__item"><a href="pricelist.html" class="nav__link"><span class="nav__text">Прайс-лист</span></a></li>
+              <li class="nav__item"><a href="catalog.html" class="nav__link"><span class="nav__text nav__text--active">Магазин</span></a></li>
+              <li class="nav__item"><a href="" class="nav__link"><span class="nav__text">Контакты</span></a></li>
             </ul>
           </nav>
         </div>
@@ -37,9 +37,9 @@
       <div class="breadcrumbs">
         <h2 class="breadcrumbs__title">Средства для ухода</h2>
         <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link"><span class="nav__text">Главная</a></li>
           <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Магазин</a></li>
-          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Средства для ухода</a></li>
+          <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link--active">Средства для ухода</a></li>
         </ul>
       </div>
       <div class="catalog__wrapper">
@@ -53,42 +53,42 @@
                   <label class="filter__label">
                     <input type="checkbox" class="filter__input" name="Baxter of California" checked>
                     <span class="filter__checkbox-icon"></span>
-                    Baxter of California
+                    <span class="filter__text">Baxter of California</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
                     <input type="checkbox" class="filter__input" name="Mr Natty">
                     <span class="filter__checkbox-icon"></span>
-                    Mr Natty
+                    <span class="filter__text">Mr Natty</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
                     <input type="checkbox" class="filter__input" name="Suavecito" checked>
                     <span class="filter__checkbox-icon"></span>
-                    Suavecito
+                    <span class="filter__text">Suavecito</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
                     <input type="checkbox" class="filter__input" name="Malin+Goetz">
                     <span class="filter__checkbox-icon"></span>
-                    Malin+Goetz
+                    <span class="filter__text">Malin+Goetz</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
-                    <input type="checkbox" class="filter__input" name="Murrays">
+                    <input type="checkbox" class="filter__input" name="Murrays" disabled>
                     <span class="filter__checkbox-icon"></span>
-                    Murray's
+                    <span class="filter__text">Murray's</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
                     <input type="checkbox" class="filter__input" name="American Crew" checked>
                     <span class="filter__checkbox-icon"></span>
-                    American Crew
+                    <span class="filter__text">American Crew</span>
                   </label>
                 </li>
               </ul>
@@ -98,23 +98,23 @@
               <ul class="filter__list">
                 <li class="filter__item">
                   <label class="filter__label">
-                    <input type="radio" class="filter__input" name="goods" value="shave">
+                    <input type="radio" class="filter__input" name="goods" value="shave" checked>
                     <span class="filter__radio-icon"></span>
-                    Бритвенные принадлежности
+                    <span class="filter__text">Бритвенные принадлежности</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
                     <input type="radio" class="filter__input" name="goods" value="care">
                     <span class="filter__radio-icon"></span>
-                    Средства для ухода
+                    <span class="filter__text">Средства для ухода</span>
                   </label>
                 </li>
                 <li class="filter__item">
                   <label class="filter__label">
                     <input type="radio" class="filter__input" name="goods" value="accessories">
                     <span class="filter__radio-icon"></span>
-                    Аксессуары
+                    <span class="filter__text">Аксессуары</span>
                   </label>
                 </li>
               </ul>
@@ -252,6 +252,8 @@
     </form>
     <span class="popup___close"></span>
   </div>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>

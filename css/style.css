@@ -11,6 +11,7 @@ body {
   font-style: normal;
   font-stretch: normal;
   text-transform: uppercase;
+  cursor: default;
 }
 
 a {
@@ -38,6 +39,16 @@ a {
 .popup,
 .map {
   display: none;
+}
+
+.popup--open {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.map--open {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 /* fonts */
@@ -84,7 +95,7 @@ a {
   background-color: #000000;
 }
 
-.nav__wrapper {
+.header__wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -110,13 +121,22 @@ a {
   color: #ffffff;
 }
 
+.nav__text {
+  padding-bottom: 22px;
+}
+
+.nav__text--active {
+  border-bottom: 4px solid #ffffff;
+}
+
 .login {
   position: relative;
+  padding-left: 54px;
 }
 
 .login::before {
   position: absolute;
-  left: -11px;
+  left: 22px;
   top: 28px;
   content: url(../img/login.png);
   opacity: 0.3;
@@ -246,6 +266,8 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #000000;
+  cursor: pointer;
+  outline: none;
 }
 
 .gallery {
@@ -449,12 +471,12 @@ a {
 
 /* catalog */
 
-.catalog-nav__wrapper {
+.nav__wrapper {
   display: flex;
   align-items: center;
 }
 
-.catalog-logo__link {
+.logo__link {
   padding: 24px 20px 24px 20px;
   line-height: 0;
 }
@@ -502,6 +524,10 @@ a {
   color: #000000;
 }
 
+.breadcrumbs__link--active {
+  color: #aba9a7;
+}
+
 .catalog__wrapper {
   display: flex;
   justify-content: space-between;
@@ -534,6 +560,10 @@ a {
 
 .filter__item:not(:last-child) {
   margin-bottom: 14px;
+}
+
+.filter__label {
+  cursor: pointer;
 }
 
 .filter__input {
@@ -906,6 +936,10 @@ a {
   margin-top: 15px;
 }
 
+.popup__checkbox-label {
+  cursor: pointer;
+}
+
 .popup__checkbox {
   display: none;
 }
@@ -937,16 +971,17 @@ a {
   padding: 10px;
   background-image: url(../img/close-cross.png);
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 /* map */
 
 .map {
-  position: absolute;
-  top: 61%;
+  position: fixed;
+  top: 50%;
   left: 50%;
+  margin-top: -287px;
   margin-left: -390px;
-  
 }
 
 .map__iframe {
@@ -964,4 +999,138 @@ a {
   padding: 10px;
   background-image: url(../img/close-cross.png);
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* states */
+
+.logo__link:hover,
+.logo__link:focus {
+  opacity: 0.5;
+}
+
+.nav__item:hover,
+.login:hover {
+  background-color: #1f1f1f;
+}
+
+.login:active,
+.login:focus {
+  background-color: #1f1f1f;
+}
+
+.login:active:before,
+.login:focus:before {
+  opacity: 1;
+}
+
+.filter__input:checked + .filter__checkbox-icon,
+.popup__checkbox:checked + .popup__checkbox-icon {
+  background-image: url(../img/cross.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter__input:checked + .filter__radio-icon {
+  background-image: url(../img/dot.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter__label:hover .filter__text,
+.filter__label:focus .filter__text,
+.popup__checkbox-label:hover .popup__checkbox-text,
+.popup__checkbox-label:focus .popup__checkbox-text,
+.popup__recover:hover,
+.popup__recover:focus {
+  color: #663d15;
+}
+
+.filter__input:disabled + .filter__checkbox-icon {
+  opacity: 0.2;
+}
+
+.filter__input:disabled ~ .filter__text,
+.filter__input:disabled:hover ~ .filter__text,
+.filter__input:disabled:focus ~ .filter__text {
+  color: rgba(0, 1, 1, 0.2);
+}
+
+.button:hover,
+.button:focus,
+.cards__pages-link:hover,
+.cards__pages-link:focus {
+  background-color: #663d15;
+  color: #ffffff;
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: #ffffff;
+}
+
+.social__link:hover:before,
+.social__link:hover:focus {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social__link--vk:hover:before,
+.social__link--vk:focus:before {
+  background-image: url(../img/vk-black.png);
+}
+
+.social__link--facebook:hover:before,
+.social__link--facebook:focus:before {
+  background-image: url(../img/facebook-black.png);
+}
+
+.social__link--instagram:hover:before,
+.social__link--instagram:focus:before {
+  background-image: url(../img/instagram-black.png);
+}
+
+.developer__button:hover,
+.developer__button:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.cards__item:hover {
+  transform: scale(1.02);
+}
+
+.appointment__input:hover,
+.appointment__input:focus,
+.popup__input:hover,
+.popup__input:focus {
+  border-color: #663d15;
+  outline: none;
+}
+
+.popup__close:hover,
+.popup__close:focus,
+.map__close:hover,
+.map__close:focus {
+  opacity: 0.5;
+}
+
+/* animation */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
