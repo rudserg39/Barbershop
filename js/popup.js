@@ -5,7 +5,7 @@ var popupOpenBtn = document.querySelector('.login');
 var popupCloseBtn = popup.querySelector('.popup__close');
 
 var map = document.querySelector('.map');
-var mapOpenBtn = document.querySelector('.popup-buttons__route');
+var mapOpenBtn = document.querySelectorAll('.route');
 var mapCloseBtn = map.querySelector('.map__close');
 
 
@@ -47,9 +47,11 @@ document.addEventListener('keydown', function (evt) {
 
 /* map */
 
-mapOpenBtn.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  openBtnClickHandler(map, 'map--open');
+mapOpenBtn.forEach(function (el) {
+  el.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    openBtnClickHandler(map, 'map--open');
+  });
 });
 
 mapCloseBtn.addEventListener('click', function () {

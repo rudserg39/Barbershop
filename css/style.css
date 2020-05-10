@@ -4,6 +4,7 @@
 }
 
 body {
+  min-width: 940px;
   font-family: 'PT Sans Narrow', Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -103,6 +104,7 @@ a {
 .nav {
   display: inline-block;
   width: 544px;
+  vertical-align: middle;
 }
 
 .nav__list {
@@ -264,28 +266,74 @@ a {
   text-align: center;
   font-weight: 700; 
   text-transform: uppercase;
+  vertical-align: middle;
   color: #ffffff;
   background-color: #000000;
   cursor: pointer;
   outline: none;
+  border: none;
 }
 
 .gallery {
   margin-left: 90px;
 }
 
+.slider {
+  width: 300px;
+  overflow: hidden;
+}
+
 .gallery__title {
   margin-bottom: 21px;
 }
 
+.slider__slides-wrapper {
+  display: flex;
+}
+
 .slider__img {
+  display: block;
   border: 7px solid #ffffff;
+  background-image: url(../img/texture-section.jpeg);
+  background-repeat: repeat;
 }
 
 .slider__buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
+}
+
+.slider__radio {
+  display: none;
+}
+
+#slider__left:checked ~ .slider__slides-wrapper .slider__slide--right {
+  transform: translateX(-300px);
+  transition: transform 500ms ease 0s;
+}
+
+#slider__left:checked ~ .slider__slides-wrapper .slider__slide--left {
+  transform: translateX(-300px);
+  transition: transform 500ms ease 0s;
+}
+
+#slider__left:checked ~ .slider__buttons .slider__button--left {
+  background-color: #663d15;
+}
+
+#slider__right:checked ~ .slider__slides-wrapper .slider__slide--right {
+  transform: translateX(0px);
+  transition: transform 500ms ease 0s;
+}
+
+#slider__right:checked ~ .slider__slides-wrapper .slider__slide--left {
+  transform: translateX(0px);
+  transition: transform 500ms ease 0s;
+}
+
+#slider__right:checked ~ .slider__buttons .slider__button--right {
+  background-color: #663d15;
 }
 
 .feedback {
@@ -508,6 +556,7 @@ a {
   display: inline-block;
   content: '';
   padding: 4px 4px;
+  vertical-align: middle;
   background-color: #000000;
   transform: rotate(45deg);
 }
@@ -564,10 +613,15 @@ a {
 
 .filter__label {
   cursor: pointer;
+  outline: none;
 }
 
 .filter__input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .filter__checkbox-icon {
@@ -612,7 +666,13 @@ a {
 
 .card__product-link {
   display: block;
-  margin: 6px 17px 12px;
+  margin: 13px 17px 12px;
+}
+
+.cards__img {
+  display: block;
+  background-image: url(../img/texture-section.jpeg);
+  background-repeat: repeat;
 }
 
 .cards__product-type ,
@@ -639,6 +699,7 @@ a {
   width: 109px;
   padding: 11px 0px;
   text-align: center;
+  vertical-align: middle;
   background-color: rgba(0, 1, 1, 0.2);
 }
 
@@ -698,6 +759,7 @@ a {
   width: 158px;
   content: '';
   padding: 1px;
+  vertical-align: middle;
   background-color: #000000;
 }
 
@@ -709,6 +771,7 @@ a {
   width: 158px;
   content: '';
   padding: 1px;
+  vertical-align: middle;
   background-color: #000000;
 }
 
@@ -744,6 +807,7 @@ a {
   display: inline-block;
   content: '';
   padding: 4px 4px;
+  vertical-align: middle;
   background-color: #000000;
   transform: rotate(45deg);
 }
@@ -878,6 +942,7 @@ a {
   display: inline-block;
   content: '';
   padding: 4px 4px;
+  vertical-align: middle;
   background-color: #000000;
   transform: rotate(45deg);
 }
@@ -941,7 +1006,11 @@ a {
 }
 
 .popup__checkbox {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .popup__checkbox-icon {
@@ -990,6 +1059,7 @@ a {
   background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   box-shadow: 0px 30px 50px 0 rgba(0, 1, 1, 0.75);
+  border: none;
 }
 
 .map__close {
@@ -1009,12 +1079,9 @@ a {
   opacity: 0.5;
 }
 
-.nav__item:hover,
-.login:hover {
-  background-color: #1f1f1f;
-}
-
-.login:active,
+.nav__link:hover,
+.nav__link:focus,
+.login:hover,
 .login:focus {
   background-color: #1f1f1f;
 }
@@ -1022,6 +1089,15 @@ a {
 .login:active:before,
 .login:focus:before {
   opacity: 1;
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus {
+  color: #aba9a7;
+}
+
+.filter__input:focus ~ .filter__text {
+  color: #663d15;
 }
 
 .filter__input:checked + .filter__checkbox-icon,
@@ -1038,9 +1114,8 @@ a {
 }
 
 .filter__label:hover .filter__text,
-.filter__label:focus .filter__text,
 .popup__checkbox-label:hover .popup__checkbox-text,
-.popup__checkbox-label:focus .popup__checkbox-text,
+.popup__checkbox:focus ~ .popup__checkbox-text,
 .popup__recover:hover,
 .popup__recover:focus {
   color: #663d15;
